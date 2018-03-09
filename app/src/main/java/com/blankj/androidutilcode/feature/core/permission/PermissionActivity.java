@@ -78,7 +78,7 @@ public class PermissionActivity extends BaseBackActivity {
     public void onWidgetClick(View view) {
         switch (view.getId()) {
             case R.id.btn_open_app_settings:
-                PermissionUtils.openAppSettings();
+                PermissionUtils.launchAppDetailsSettings();
                 break;
             case R.id.btn_request_calendar:
                 PermissionUtils.permission(PermissionConstants.CALENDAR)
@@ -92,6 +92,7 @@ public class PermissionActivity extends BaseBackActivity {
                             @Override
                             public void onGranted(List<String> permissionsGranted) {
                                 updateAboutPermission();
+                                LogUtils.d(permissionsGranted);
                             }
 
                             @Override
@@ -123,6 +124,7 @@ public class PermissionActivity extends BaseBackActivity {
                             @Override
                             public void onGranted(List<String> permissionsGranted) {
                                 updateAboutPermission();
+                                LogUtils.d(permissionsGranted);
                             }
 
                             @Override

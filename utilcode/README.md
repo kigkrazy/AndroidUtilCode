@@ -2,7 +2,7 @@
 
 Gradle:
 ```groovy
-compile 'com.blankj:utilcode:1.12.5'
+compile 'com.blankj:utilcode:1.13.2'
 ```
 
 
@@ -44,30 +44,28 @@ finishAllActivitiesExceptNewest
 
 * ### About App -> [AppUtils.java][app.java] -> [Demo][app.demo]
 ```
-isInstallApp
 installApp
 installAppSilent
 uninstallApp
 uninstallAppSilent
+isAppInstalled
 isAppRoot
+isAppDebug
+isAppSystem
+isAppForeground
 launchApp
+launchAppDetailsSettings
 exitApp
-getAppPackageName
-getAppDetailsSettings
-getAppName
 getAppIcon
+getAppPackageName
+getAppName
 getAppPath
 getAppVersionName
 getAppVersionCode
-isSystemApp
-isAppDebug
 getAppSignature
 getAppSignatureSHA1
-isAppForeground
-getForegroundApp
 getAppInfo
 getAppsInfo
-cleanAppData
 ```
 
 * ### About Bar -> [BarUtils.java][bar.java] -> [Demo][bar.demo]
@@ -75,6 +73,7 @@ cleanAppData
 getStatusBarHeight
 setStatusBarVisibility
 isStatusBarVisible
+setStatusBarLightMode
 addMarginTopEqualStatusBarHeight
 subtractMarginTopEqualStatusBarHeight
 setStatusBarColor
@@ -115,7 +114,7 @@ cleanInternalDbs
 cleanInternalDbByName
 cleanInternalSp
 cleanExternalCache
-cleanCustomCache
+cleanCustomDir
 ```
 
 * ### About Close -> [CloseUtils.java][close.java]
@@ -126,13 +125,13 @@ closeIOQuietly
 
 * ### About Convert -> [ConvertUtils.java][convert.java] -> [Test][convert.test]
 ```
+bytes2Bits, bits2Bytes
+bytes2Chars, chars2Bytes
 bytes2HexString, hexString2Bytes
-chars2Bytes, bytes2Chars
 memorySize2Byte, byte2MemorySize
 byte2FitMemorySize
 timeSpan2Millis, millis2TimeSpan
 millis2FitTimeSpan
-bytes2Bits, bits2Bytes
 input2OutputStream, output2InputStream
 inputStream2Bytes, bytes2InputStream
 outputStream2Bytes, bytes2OutputStream
@@ -173,7 +172,6 @@ urlDecode
 base64Encode
 base64Encode2String
 base64Decode
-base64UrlSafeEncode
 htmlEncode
 htmlDecode
 ```
@@ -318,7 +316,7 @@ compressBySampleSize
 getInstallAppIntent
 getUninstallAppIntent
 getLaunchAppIntent
-getAppDetailsSettingsIntent
+getLaunchAppDetailsSettingsIntent
 getShareTextIntent
 getShareImageIntent
 getComponentIntent
@@ -392,13 +390,16 @@ getDomainAddress
 isEmpty
 isNotEmpty
 equals
+requireNonNull
+getOrDefault
+hashCode
 ```
 
 * ### About Permission -> [PermissionUtils.java][permission.java] -> [Demo][permission.demo]
 ```
 getPermissions
 isGranted
-openAppSettings
+launchAppDetailsSettings
 permission
 rationale
 callback
@@ -409,7 +410,9 @@ request
 * ### About Phone -> [PhoneUtils.java][phone.java] -> [Demo][phone.demo]
 ```
 isPhone
+getDeviceId
 getIMEI
+getMEID
 getIMSI
 getPhoneType
 isSimCardReady
@@ -420,9 +423,6 @@ dial
 call
 sendSms
 sendSmsSilent
-getAllContactInfo
-getContactNum
-getAllSMS
 ```
 
 * ### About Process -> [ProcessUtils.java][process.java] -> [Demo][process.demo]
@@ -488,7 +488,7 @@ getSDCardPaths
 
 * ### About Service -> [ServiceUtils.java][service.java]
 ```
-getAllRunningService
+getAllRunningServices
 startService
 stopService
 bindService

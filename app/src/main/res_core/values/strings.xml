@@ -66,8 +66,8 @@
     <string name="uninstall_successfully">Uninstall successfully</string>
     <string name="uninstall_unsuccessfully">Uninstall unsuccessfully</string>
     <string name="app_launch">Launch App</string>
+    <string name="app_launch_details_settings">Launch App Details Settings</string>
     <string name="app_exit">Exit App</string>
-    <string name="app_get_details_settings">Get App Details Settings</string>
 
     <!--Bar 相关-->
     <string name="bar_about_status_bar">About Status Bar</string>
@@ -77,6 +77,8 @@
     <string name="bar_status_about">About Status</string>
     <string name="bar_status_show">Show Status</string>
     <string name="bar_status_hide">Hide Status</string>
+    <string name="bar_status_light_mode">Light Mode Status</string>
+    <string name="bar_status_dark_mode">Dark Mode Status</string>
     <string name="bar_status_set_color">Set Color</string>
     <string name="bar_status_set_alpha">Set Alpha</string>
     <string name="bar_status_set_image_view">Set Image View</string>
